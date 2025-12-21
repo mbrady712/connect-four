@@ -1,66 +1,62 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import graphic from "../../public/login_graphic.jpg"
+import Link from 'next/link'
+
+export function LoginForm (){
+  return (
+    <form>
+      <h1>Login</h1>
+      <label htmlFor="fname">Username</label><br/>
+      <input type="text" id="fname" name="fname"/><br/>
+      <label htmlFor="lname">Password</label><br/>
+      <input type="text" id="lname" name="lname"/><br/>
+      <input type="submit" id="submit" name="submit" value="Login"/>
+    </form>
+  );
+}
+
+export function Navbar(){
+  return(
+    <nav>
+      <div className="title">
+        <Link href={""} className="titleLink">
+          <div className="blue">
+            Connect 
+          </div>
+          <div className="red">
+            &nbsp;Four
+          </div>
+        </Link>
+      </div>
+      <div>
+        <Link href={""}>Login</Link>
+      </div>
+    </nav>
+  );
+}
+
+export function Links (){
+  return(
+    <div>
+      <Link href={""}>Forgot Username?</Link><br/>
+      <Link href={""}>Forgot Password?</Link>
+    </div>
+  );
+}
+
+export function Graphic (){
+  return (
+    <img src="login_graphic.jpg"></img>
+  );
+}
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div>
+      <Navbar></Navbar>
+      <Graphic></Graphic>
+      <LoginForm></LoginForm>
+      <Links></Links>
     </div>
   );
 }
