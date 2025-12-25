@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function LoginForm (){
   return (
     <form>
@@ -6,7 +8,9 @@ export default function LoginForm (){
       <input type="text" id="fname" name="fname"/><br/>
       <label htmlFor="lname">Password</label><br/>
       <input type="text" id="lname" name="lname"/><br/>
+      <Link href={"/playGame"}>
       <input type="submit" id="submit" name="submit" value="Login"/>
+      </Link>
     </form>
   );
 }

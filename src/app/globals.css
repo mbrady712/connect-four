@@ -1,6 +1,8 @@
 :root {
   --background: #f8ffe5;
   --foreground: #171717;
+  --table1: #deb887;
+  --table2: #cdaa7d;
   --blue: #1b9aaa;
   --red: #ef476f;
 }
@@ -69,4 +71,58 @@ nav{
 @font-face {
     font-family: 'Cartoon';
     src: url('../../public/SuperCartoon-6R791.ttf');
+}
+
+#game{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  background-color: var(--blue);
+  padding: 2%;
+  border-radius: 5%;
+}
+
+.square{
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  height: 100px;
+  width: 100px;
+}
+
+.circle{
+  background-color: var(--background);
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+#gameContainer{
+  padding: 2%;
+  display: flex;
+}
+
+#scoreContainer{
+  text-align: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#scoreTable, th, td{
+  width: 80%;
+  border:1px solid black;
+  margin-top: 10%;
+}
+
+th, td{
+  width: 25%;
+}
+
+.rowColor1{
+  background-color: #cdaa7d;
+}
+
+.rowColor2{
+  background-color: #deb887b1;
 }
