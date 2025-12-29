@@ -126,3 +126,7 @@ th, td{
 .rowColor2{
   background-color: #deb887b1;
 }
+
+.error{
+  color: crimson;
+}
