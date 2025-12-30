@@ -25,31 +25,30 @@ export default function LoginForm (){
 
   e.preventDefault()
   //Client side validation and cleaning
-  var usernameErrors = validateUsername(username);
-  var passwordErrors = validatePassword(password);
-  console.log(passwordErrors)
+  var usernameErrors = validateUsername(username.trim());
+  var passwordErrors = validatePassword(password.trim());
+
   setUsernameErrors(usernameErrors);
   setPasswordErrors(passwordErrors);
 
   if(usernameErrors.length === 0 && passwordErrors.length === 0){
     router.push("../playGame");
-  }
-
-  //Send data to API endpoint
-    var formData = {
-      "username":username,
-      "password":password
+      //Send data to API endpoint
+      var formData = {
+        "username":username,
+        "password":password
+      }
     }
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <h1>Login</h1>
-      <label htmlFor="fname">Username</label><br/>
-      <input type="text" id="fname" name="fname" onChange={handleUsername}/><br/>
+      <label htmlFor="username">Username</label><br/>
+      <input type="text" name="username" onChange={handleUsername}/><br/>
       {usernameErrors.map((error, index) => (<div className="error" key={index}>{error}</div>))}
-      <label htmlFor="lname">Password</label><br/>
-      <input type="password" id="lname" name="lname" onChange={handlePassword}/><br/>
+      <label htmlFor="password">Password</label><br/>
+      <input type="password" name="password" onChange={handlePassword}/><br/>
       {passwordErrors.map((error, index) => (<div className="error" key={index}>{error}</div>))}
       <input type="submit" id="submit" name="submit" value="Login"/>
     </form>

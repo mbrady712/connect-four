@@ -1,3 +1,14 @@
+export function validateEmail(email) {
+  var error = ""
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  if(!emailRegex.test(email)){
+    error = "Email is not valid"
+  };
+
+  return error;
+}
+
 export function validateUsername(username){
     var errors = [];
 
