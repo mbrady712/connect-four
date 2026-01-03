@@ -7,11 +7,6 @@ import { validateCode } from "@/util/Validations";
 import { validatePassword } from "@/util/Validations";
 
 export default function ResetPassword(){
-    //Enter username or email associated with account
-    //Send secure code message
-    //Ask for secure code
-    //Ask for new password
-    //Link back to Login
 
       const [username, setUsername] = useState("");
       const [code, setCode] = useState("");
@@ -36,7 +31,6 @@ export default function ResetPassword(){
      }
 
      function checkUsername(){
-          //Client side validation and cleaning
           var usernameErrors = validateUsername(username.trim());
           setUsernameErrors(usernameErrors);
 
