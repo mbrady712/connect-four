@@ -138,3 +138,51 @@ th, td{
 .invisible{
   display: none;
 }
+
+#loggedInHeader, #loggedOutHeader{
+  display: flex;
+  justify-content: right;
+}
+
+#headerPicCpontainer{
+  width: 5%;
+}
+
+#headerPic{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+#headerPicContainer, #accountInfoLink, #logoutLink, #createAccountLink, #loginLink, #gameLink{
+  padding: 10px;
+}
+
+#accountPage{
+  display: flex;
+  height: 80%;
+  align-items: center;
+}
+
+#profilePicContainer, #accountInfo{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#accountInfo{
+  font-size: 2em;
+}
+
+#profilePic{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
