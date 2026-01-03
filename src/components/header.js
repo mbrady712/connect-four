@@ -19,7 +19,7 @@ export function Header(){
       {loggedIn ? 
       <div id="loggedInHeader">
         <div id="headerPicContainer">
-          <img id="headerPic" src="spongebob.jpeg"/>
+          <img id="headerPic" src="profile.png"/>
         </div>
         <Link id="gameLink" href={"/playGame"}>Play!</Link>
         <Link id="accountInfoLink" href={"/viewAccount"}>Account Info</Link>

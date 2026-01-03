@@ -186,3 +186,12 @@ html, body{
   margin: 0;
   padding: 0;
 }
+
+#accountTable{
+  border: 10px solid var(--blue);
+  border-radius: 5%;
+}
+
+.info{
+  border: none;
+}
