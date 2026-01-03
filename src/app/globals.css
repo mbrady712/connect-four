@@ -130,3 +130,11 @@ th, td{
 .error{
   color: crimson;
 }
+
+.visible{
+  display: block;
+}
+
+.invisible{
+  display: none;
+}

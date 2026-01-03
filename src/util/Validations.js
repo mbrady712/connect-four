@@ -20,10 +20,6 @@ export function validateUsername(username){
       errors.push("Username must be at least 8 characters long");
     }
 
-    if(errors.length == 0){
-      errors = [];
-    }
-
     return errors;
 }
 
@@ -67,8 +63,26 @@ function checkLowercase(str){
       errors.push("Password must contain at least one special character")
     }
 
-    if(errors.length == 0){
-      errors = [];
+    return errors;
+  }
+
+  function containsOnlyNumbers(code){
+    return /^\d+$/.test(code);
+  }
+
+  export function validateCode(code){
+       var errors = [];
+
+    if(code === ""){
+      errors.push("Secure code cannot be empty");
+    }
+    
+    if(code.length != 6){
+      errors.push("Secure code is exactly six numbers");
+    }
+
+    if(!containsOnlyNumbers(code)){
+      errors.push("Secure code consists of numbers only");
     }
 
     return errors;
